@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Visitor
+Bundle-SymbolicName: fr.inria.diverse.minilang.visitor
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: fr.inria.diverse.minilang.model;bundle-version="0.1.0";visibility:=reexport
+Export-Package: fr.inria.diverse.minilang.visitor

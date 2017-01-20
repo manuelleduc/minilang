@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated minilang -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="minilang.presentation.MinilangModelWizardID"
+            name="%_UI_MinilangModelWizard_label"
+            class="minilang.presentation.MinilangModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/MinilangModelFile.gif">
+         <description>%_UI_MinilangModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated minilang -->
+      <editor
+            id="minilang.presentation.MinilangEditorID"
+            name="%_UI_MinilangEditor_label"
+            icon="icons/full/obj16/MinilangModelFile.gif"
+            extensions="minilang"
+            class="minilang.presentation.MinilangEditor"
+            contributorClass="minilang.presentation.MinilangActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
