@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse version="3.4"?><plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MinilangLanguageMT -->
+      <package
+            uri="http://fr.inria.diverse.minilang.melange.minilanglanguagemt/minilang/"
+            class="fr.inria.diverse.minilang.melange.minilanglanguagemt.minilang.MinilangPackage"
+            genModel="model-gen/MinilangLanguageMT.genmodel"/>
+   </extension>
+  <extension point="org.gemoc.gemoc_language_workbench.sequential.xdsml">
+    <XDSML_Definition modelLoader_class="org.gemoc.executionframework.extensions.sirius.modelloader.DefaultModelLoader" name="fr.inria.diverse.minilang.melange.MinilangLanguage" xdsmlFilePath="/fr.inria.diverse.minilang.melange/bin/fr/inria/diverse/minilang/melange/Minilang.melange"/>
+  </extension>
+  
+<extension point="fr.inria.diverse.melange.modeltype">
+    <modeltype id="fr.inria.diverse.minilang.melange.MinilangLanguageMT" uri="http://fr.inria.diverse.minilang.melange.minilanglanguagemt/"/>
+  </extension>
+  <extension point="fr.inria.diverse.melange.language">
+    <language aspects="Condition:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ConditionAspect;VariableRef:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.VariableRefAspect;Variable:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.VariableAspect;Program:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ProgramAspect;Statement:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.StatementAspect;BinaryOperation:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.BinaryOperationAspect;Constant:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ConstantAspect;Modulo:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ModuloAspect;Sum:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.SumAspect;Method:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.MethodAspect;CallMethod:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.CallMethodAspect;RotateRight:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.RotateRightAspect;Line:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.LineAspect;VariableAffect:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.VariableAffectAspect;IfStmt:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.IfStmtAspect;GreaterThan:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.GreaterThanAspect;Move:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.MoveAspect;Value:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ValueAspect;Block:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.BlockAspect;RotateLeft:fr.inria.diverse.minilang.melange.minilanglanguage.aspects.RotateLeftAspect" entryPoints="fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ProgramAspect.mainK3(fr.inria.diverse.minilang.melange.minilanglanguage.minilang.Program)" exactType="fr.inria.diverse.minilang.melange.MinilangLanguageMT" id="fr.inria.diverse.minilang.melange.MinilangLanguage" uri="http://fr.inria.diverse.minilang.melange.minilanglanguage/minilang/">
+      <adapter class="fr.inria.diverse.minilang.melange.minilanglanguage.adapters.minilanglanguagemt.MinilangLanguageAdapter" modeltypeId="fr.inria.diverse.minilang.melange.MinilangLanguageMT"/>
+    </language>
+  </extension>
+</plugin>

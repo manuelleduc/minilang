@@ -1,72 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="minilang" nsURI="http://diverse.inria.fr/minilang" nsPrefix="minilang">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="minilang" nsURI="http://diverse.inria.fr/minilang" nsPrefix="minilang">
   <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1"
-        eType="#//Method" containment="true" eOpposite="#//Method/program"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mainMethod" lowerBound="1"
-        eType="#//Method"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1"
-        eType="#//Variable" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="#//Cardinals"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lines" upperBound="-1"
-        eType="#//Line" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1" eType="//Method" containment="true" eOpposite="//Method/program"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainMethod" lowerBound="1" eType="//Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" upperBound="-1" eType="//Variable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="angle" eType="//Cardinals"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lines" upperBound="-1" eType="//Line" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="program" lowerBound="1"
-        eType="#//Program" eOpposite="#//Program/methods"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" eType="#//Block"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="program" lowerBound="1" eType="//Program" eOpposite="//Program/methods"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="block" lowerBound="1" eType="//Block" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Variable">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Block">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1"
-        eType="#//Statement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" upperBound="-1" eType="//Statement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IfStmt" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="thenBranch" lowerBound="1"
-        eType="#//Block" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elseBranch" eType="#//Block"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1"
-        eType="#//Condition" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IfStmt" eSuperTypes="//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="thenBranch" lowerBound="1" eType="//Block" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elseBranch" eType="//Block" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" lowerBound="1" eType="//Condition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Condition" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//Condition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="#//Value"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Value"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="//Value" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="#//Value">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Constant" eSuperTypes="//Value">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableRef" eSuperTypes="#//Value">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableRef" eSuperTypes="//Value">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1" eType="//Variable"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VariableAffect" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="#//Variable"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="#//Value"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableAffect" eSuperTypes="//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1" eType="//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="//Value" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//BinaryOperation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Modulo" eSuperTypes="#//BinaryOperation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" eSuperTypes="#//Value">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="#//Value"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="#//Value"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Modulo" eSuperTypes="//BinaryOperation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BinaryOperation" abstract="true" eSuperTypes="//Value">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" lowerBound="1" eType="//Value" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" lowerBound="1" eType="//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Cardinals">
     <eLiterals name="NORTH"/>
@@ -74,17 +70,24 @@
     <eLiterals name="SOUTH" value="2"/>
     <eLiterals name="WEST" value="3"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CallMethod" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
-        eType="#//Method"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CallMethod" eSuperTypes="//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1" eType="//Method"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Move" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RotateRight" eSuperTypes="#//Statement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RotateLeft" eSuperTypes="#//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Move" eSuperTypes="//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RotateRight" eSuperTypes="//Statement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RotateLeft" eSuperTypes="//Statement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Line">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x2">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y2">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eStructuralFeatures>
   </eClassifiers>
 </ecore:EPackage>

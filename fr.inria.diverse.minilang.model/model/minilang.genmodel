@@ -1,78 +1,172 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.minilang.model/src" modelPluginID="fr.inria.diverse.minilang.model"
-    modelName="Minilang" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.minilang.model/src" modelPluginID="fr.inria.diverse.minilang.model" modelName="Minilang" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>minilang.ecore</foreignModel>
-  <genPackages prefix="Minilang" disposableProviderFactory="true" ecorePackage="minilang.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="minilang.ecore#//Cardinals">
-      <genEnumLiterals ecoreEnumLiteral="minilang.ecore#//Cardinals/NORTH"/>
-      <genEnumLiterals ecoreEnumLiteral="minilang.ecore#//Cardinals/EAST"/>
-      <genEnumLiterals ecoreEnumLiteral="minilang.ecore#//Cardinals/SOUTH"/>
-      <genEnumLiterals ecoreEnumLiteral="minilang.ecore#//Cardinals/WEST"/>
+  <genPackages prefix="Minilang" disposableProviderFactory="true">
+    <ecorePackage href="minilang.ecore#/"/>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="minilang.ecore#//Cardinals"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minilang.ecore#//Cardinals/NORTH"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minilang.ecore#//Cardinals/EAST"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minilang.ecore#//Cardinals/SOUTH"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="minilang.ecore#//Cardinals/WEST"/>
+      </genEnumLiterals>
     </genEnums>
-    <genClasses ecoreClass="minilang.ecore#//Program">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//Program/methods"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//Program/mainMethod"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//Program/variables"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Program/x"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Program/y"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Program/angle"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Program/distance"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//Program/lines"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Program"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Program/methods"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Program/mainMethod"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Program/variables"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Program/x"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Program/y"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Program/angle"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Program/distance"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Program/lines"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Method">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//Method/program"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Method/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//Method/block"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Method"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Method/program"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Method/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Method/block"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Variable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Variable/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Variable/value"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Variable"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Variable/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Variable/value"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Block">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//Block/statements"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Block"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//Block/statements"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//IfStmt">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//IfStmt/thenBranch"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//IfStmt/elseBranch"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//IfStmt/condition"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//IfStmt"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//IfStmt/thenBranch"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//IfStmt/elseBranch"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//IfStmt/condition"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Statement"/>
-    <genClasses ecoreClass="minilang.ecore#//Condition"/>
-    <genClasses ecoreClass="minilang.ecore#//GreaterThan">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//GreaterThan/left"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//GreaterThan/right"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Statement"/>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Value"/>
-    <genClasses ecoreClass="minilang.ecore#//Constant">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Constant/value"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Condition"/>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//VariableRef">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//VariableRef/variable"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//GreaterThan"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//GreaterThan/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//GreaterThan/right"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//VariableAffect">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//VariableAffect/variable"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//VariableAffect/value"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Value"/>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Sum"/>
-    <genClasses ecoreClass="minilang.ecore#//Modulo"/>
-    <genClasses ecoreClass="minilang.ecore#//BinaryOperation">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//BinaryOperation/right"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference minilang.ecore#//BinaryOperation/left"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Constant"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Constant/value"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//CallMethod">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference minilang.ecore#//CallMethod/method"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//VariableRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//VariableRef/variable"/>
+      </genFeatures>
     </genClasses>
-    <genClasses ecoreClass="minilang.ecore#//Move"/>
-    <genClasses ecoreClass="minilang.ecore#//RotateRight"/>
-    <genClasses ecoreClass="minilang.ecore#//RotateLeft"/>
-    <genClasses ecoreClass="minilang.ecore#//Line">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Line/x1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Line/y1"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Line/x2"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute minilang.ecore#//Line/y2"/>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//VariableAffect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//VariableAffect/variable"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//VariableAffect/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Sum"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Modulo"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//BinaryOperation"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//BinaryOperation/right"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//BinaryOperation/left"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//CallMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="minilang.ecore#//CallMethod/method"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Move"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//RotateRight"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//RotateLeft"/>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="minilang.ecore#//Line"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Line/x1"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Line/y1"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Line/x2"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="minilang.ecore#//Line/y2"/>
+      </genFeatures>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

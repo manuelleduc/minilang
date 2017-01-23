@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="ASCII"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.inria.diverse.minilang.melange/src-gen" modelPluginID="fr.inria.diverse.minilang.melange" modelName="MinilangLanguageMT" complianceLevel="7.0" copyrightFields="false">
+  <foreignModel>platform:/resource/fr.inria.diverse.minilang.melange/model-gen/MinilangLanguageMT.ecore</foreignModel>
+  <genPackages prefix="Minilang" basePackage="fr.inria.diverse.minilang.melange.minilanglanguagemt" disposableProviderFactory="true">
+    <ecorePackage href="MinilangLanguageMT.ecore#/"/>
+    <genEnums typeSafeEnumCompatible="false">
+      <ecoreEnum href="MinilangLanguageMT.ecore#//Cardinals"/>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="MinilangLanguageMT.ecore#//Cardinals/NORTH"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="MinilangLanguageMT.ecore#//Cardinals/EAST"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="MinilangLanguageMT.ecore#//Cardinals/SOUTH"/>
+      </genEnumLiterals>
+      <genEnumLiterals>
+        <ecoreEnumLiteral href="MinilangLanguageMT.ecore#//Cardinals/WEST"/>
+      </genEnumLiterals>
+    </genEnums>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Program"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Program/methods"/>
+      </genFeatures>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Program/mainMethod"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Program/variables"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Program/x"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Program/y"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Program/angle"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Program/distance"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Program/lines"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Program/mainK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Method"/>
+      <genFeatures property="None" notify="false" createChild="false">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Method/program"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Method/name"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Method/block"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Method/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Variable"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Variable/name"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Variable/value"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Block"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//Block/statements"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Block/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//IfStmt"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//IfStmt/thenBranch"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//IfStmt/elseBranch"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//IfStmt/condition"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//IfStmt/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="MinilangLanguageMT.ecore#//Statement"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Statement/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="MinilangLanguageMT.ecore#//Condition"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Condition/evalK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//GreaterThan"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//GreaterThan/left"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//GreaterThan/right"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//GreaterThan/evalK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="MinilangLanguageMT.ecore#//Value"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Value/valueK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Constant"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Constant/value"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Constant/valueK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//VariableRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//VariableRef/variable"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//VariableRef/valueK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//VariableAffect"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//VariableAffect/variable"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//VariableAffect/value"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//VariableAffect/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Sum"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Sum/valueK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Modulo"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Modulo/valueK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false">
+      <ecoreClass href="MinilangLanguageMT.ecore#//BinaryOperation"/>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//BinaryOperation/right"/>
+      </genFeatures>
+      <genFeatures property="None" children="true" createChild="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//BinaryOperation/left"/>
+      </genFeatures>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//CallMethod"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true">
+        <ecoreFeature xsi:type="ecore:EReference" href="MinilangLanguageMT.ecore#//CallMethod/method"/>
+      </genFeatures>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//CallMethod/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Move"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//Move/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//RotateRight"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//RotateRight/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//RotateLeft"/>
+      <genOperations>
+        <ecoreOperation href="MinilangLanguageMT.ecore#//RotateLeft/executeK3"/>
+      </genOperations>
+    </genClasses>
+    <genClasses>
+      <ecoreClass href="MinilangLanguageMT.ecore#//Line"/>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Line/x1"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Line/y1"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Line/x2"/>
+      </genFeatures>
+      <genFeatures createChild="false">
+        <ecoreFeature xsi:type="ecore:EAttribute" href="MinilangLanguageMT.ecore#//Line/y2"/>
+      </genFeatures>
+    </genClasses>
+  </genPackages>
+  <usedGenPackages href="../../org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore"/>
+</genmodel:GenModel>

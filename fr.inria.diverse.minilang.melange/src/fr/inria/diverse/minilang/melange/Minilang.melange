@@ -1,0 +1,28 @@
+package fr.inria.diverse.minilang.melange
+
+language MinilangLanguage {
+	syntax "platform:/resource/fr.inria.diverse.minilang.model/model/minilang.ecore"
+	
+	with minilang.aspects.GreaterThanAspect
+	with minilang.aspects.VariableAffectAspect
+	with minilang.aspects.RotateLeftAspect
+	with minilang.aspects.StatementAspect
+	with minilang.aspects.ConditionAspect
+	with minilang.aspects.VariableAspect
+	with minilang.aspects.CallMethodAspect
+	with minilang.aspects.IfStmtAspect
+	with minilang.aspects.VariableRefAspect
+	with minilang.aspects.ValueAspect
+	with minilang.aspects.BinaryOperationAspect
+	with minilang.aspects.LineAspect
+	with minilang.aspects.MoveAspect
+	with minilang.aspects.MethodAspect
+	with minilang.aspects.BlockAspect
+	with minilang.aspects.ConstantAspect
+	with minilang.aspects.ProgramAspect
+	with minilang.aspects.SumAspect
+	with minilang.aspects.RotateRightAspect
+	with minilang.aspects.ModuloAspect 
+
+	exactType MinilangLanguageMT
+}

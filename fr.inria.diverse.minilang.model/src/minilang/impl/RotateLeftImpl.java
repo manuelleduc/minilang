@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
 public class RotateLeftImpl extends StatementImpl implements RotateLeft {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected RotateLeftImpl() {
@@ -29,7 +28,6 @@ public class RotateLeftImpl extends StatementImpl implements RotateLeft {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

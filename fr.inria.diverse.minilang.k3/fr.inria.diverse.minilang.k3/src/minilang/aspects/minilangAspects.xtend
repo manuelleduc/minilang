@@ -47,13 +47,26 @@ import fr.inria.diverse.k3.al.annotationprocessor.OverrideAspectMethod
 import org.eclipse.emf.ecore.EObject
 import minilang.MinilangFactory
 import minilang.Cardinals
+import fr.inria.diverse.k3.al.annotationprocessor.Step
+import fr.inria.diverse.k3.al.annotationprocessor.InitializeModel
+import org.eclipse.emf.common.util.EList
 
 @Aspect(className=Program)
 class ProgramAspect {
+	
+//	@InitializeModel
+//	def void useless() {
+//		println("init")
+//	}
+	
 	@Main
 	def void mainK3() {
 		_self.mainMethod.executeK3()
 	}
+//	
+//	def EList<Line> getLines() {
+//		_self.lines
+//	}
 }
 
 @Aspect(className=Method)
@@ -90,6 +103,8 @@ class IfStmtAspect extends StatementAspect {
 
 @Aspect(className=Statement)
 abstract class StatementAspect {
+	
+	@Step
 	def abstract void executeK3()
 }
 
