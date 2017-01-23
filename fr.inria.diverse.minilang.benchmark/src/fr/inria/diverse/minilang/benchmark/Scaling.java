@@ -1,9 +1,9 @@
 package fr.inria.diverse.minilang.benchmark;
 
+import fr.inria.diverse.minilang.algebra.benchmark.ObjectAlgebraScaling;
 import fr.inria.diverse.minilang.embeded.benchmark.EmbededScaling;
 import fr.inria.diverse.minilang.k3.benchmark.K3Scaling;
 import fr.inria.diverse.minilang.visitor.benchmark.VisitorScaling;
-import fr.inria.diverse.minilange.algebra.benchmark.ObjectAlgebraScaling;
 
 public class Scaling {
 	public static void main(String[] args) {

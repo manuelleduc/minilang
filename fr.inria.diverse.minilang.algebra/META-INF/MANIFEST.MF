@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Algebra
+Bundle-SymbolicName: fr.inria.diverse.minilang.algebra
+Bundle-Version: 1.0.0.qualifier
+Export-Package: fr.inria.diverse.minilang.algebra
+Require-Bundle: fr.inria.diverse.minilang.model;bundle-version="0.1.0";visibility:=reexport

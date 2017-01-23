@@ -4,6 +4,7 @@ import fr.inria.diverse.melange.adapters.EObjectAdapter;
 import fr.inria.diverse.minilang.melange.minilanglanguage.adapters.minilanglanguagemt.MinilangLanguageMTAdaptersFactory;
 import fr.inria.diverse.minilang.melange.minilanglanguage.minilang.Program;
 import fr.inria.diverse.minilang.melange.minilanglanguagemt.minilang.Cardinals;
+import fr.inria.diverse.minilang.melange.minilanglanguagemt.minilang.Line;
 import fr.inria.diverse.minilang.melange.minilanglanguagemt.minilang.Method;
 import fr.inria.diverse.minilang.melange.minilanglanguagemt.minilang.Variable;
 import java.util.Collection;
@@ -89,14 +90,18 @@ public class ProgramAdapter extends EObjectAdapter<Program> implements fr.inria.
     return variables_;
   }
   
+  private EList<Line> lines_;
+  
   @Override
-  public void mainK3() {
-    fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ProgramAspect.mainK3(adaptee);
+  public EList<Line> getLines() {
+    if (lines_ == null)
+    	lines_ = fr.inria.diverse.melange.adapters.EListAdapter.newInstance(adaptee.getLines(), adaptersFactory, eResource);
+    return lines_;
   }
   
   @Override
-  public void useless() {
-    fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ProgramAspect.useless(adaptee);
+  public void mainK3() {
+    fr.inria.diverse.minilang.melange.minilanglanguage.aspects.ProgramAspect.mainK3(adaptee);
   }
   
   protected final static double X_EDEFAULT = 0.0;

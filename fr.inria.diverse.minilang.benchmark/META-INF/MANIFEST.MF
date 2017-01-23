@@ -7,4 +7,4 @@ Export-Package: fr.inria.diverse.minilang.benchmark
 Require-Bundle: fr.inria.diverse.minilang.embeded.benchmark;bundle-version="1.0.0",
  fr.inria.diverse.minilang.k3.benchmark;bundle-version="1.0.0",
  fr.inria.diverse.minilang.visitor.benchmark;bundle-version="1.0.0",
- fr.inria.diverse.minilange.algebra.benchmark;bundle-version="1.0.0"
+ fr.inria.diverse.minilang.algebra.benchmark;bundle-version="1.0.0"
